@@ -8,10 +8,15 @@ using System.IO;
 using System.Drawing;
 using System.Diagnostics;
 using System.Windows.Forms;
+
+using NLog;
+
 namespace Mahou
 {
 	public partial class Update : Form
 	{
+
+        private readonly Logger log = LogManager.GetCurrentClassLogger();
 		//Path to now Mahou
 		public static string nPath = AppDomain.CurrentDomain.BaseDirectory;
 		static string[] UpdInfo;
@@ -216,8 +221,8 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 			}
 		}
 
-		async Task GetUpdateInfo()
-		{
+		async Task GetUpdateInfo() {
+		    log.Trace("Getting update info");
 			var Info = new List<string>(); // Update info
 			try {
 				// Latest Mahou release url
@@ -228,10 +233,7 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 					request.Proxy = MakeProxy();
 				}
 				request.ServicePoint.SetTcpKeepAlive(true, 5000, 1000);
-				var response = (HttpWebResponse)await Task.Factory
-                    .FromAsync<WebResponse>(request.BeginGetResponse,
-					               request.EndGetResponse,
-					               null);
+				var response = (HttpWebResponse)await Task.Factory.FromAsync<WebResponse>(request.BeginGetResponse, request.EndGetResponse, null);
 				//Console.WriteLine(response.StatusCode)
 				if (response.StatusCode == HttpStatusCode.OK) {
 					var data = new StreamReader(response.GetResponseStream(), true).ReadToEnd();
@@ -255,7 +257,8 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 				} else {
 					response.Close();
 				}
-			} catch (WebException) {
+			} catch (WebException ex) {
+                log.Error(ex);
 				Info = new List<string> {
 					MMain.UI[31],
 					MMain.UI[35],
@@ -270,7 +273,8 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 			try {
 				var newUri = new Uri("http://" + tbProxy.Text);
 				myProxy.Address = newUri;
-			} catch {
+			} catch (Exception ex){
+                log.Error(ex,"Proxy cannot be created");
 				gbProxy.Text = MMain.UI[51];
 				tmr.Interval = 3000;
 				tmr.Tick += (___, ____) => {
