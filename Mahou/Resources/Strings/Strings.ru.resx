@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	 <data name="ViewOnGithub" xml:space="preserve">
+    <value>Код на Github</value>
+  </data>
+  <data name="AutostartWithWindows" xml:space="preserve">
+    <value>Автозапуск с Windows</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Hotkeys" xml:space="preserve">
+    <value>Горячие клавиши</value>
+  </data>
+  <data name="ConvertWord" xml:space="preserve">
+    <value>Конверт слова</value>
+  </data>
+  <data name="ConvertSelection" xml:space="preserve">
+    <value>Конверт выделения</value>
+  </data>
+  <data name="ConvertLine" xml:space="preserve">
+    <value>Конверт линии</value>
+  </data>
+  <data name="CSSwitch" xml:space="preserve">
+    <value>КВ-Ключ</value>
+  </data>
+  <data name="RePress" xml:space="preserve">
+    <value>Пере-наж.</value>
+  </data>
+  <data name="ReSelect" xml:space="preserve">
+    <value>Пере-выдел.</value>
+  </data>
+  <data name="SwitchLayoutByKey" xml:space="preserve">
+    <value>Сменить язык клавишой:</value>
+  </data>
+  <data name="BlockCTRL" xml:space="preserve">
+    <value>Игнор. CTRL</value>
+  </data>
+  <data name="TrayIcon" xml:space="preserve">
+    <value>Иконка трея</value>
+  </data>
+  <data name="CycleMode" xml:space="preserve">
+    <value>Циклч. режим</value>
+  </data>
+  <data name="Emu" xml:space="preserve">
+    <value>Эму</value>
+  </data>
+  <data name="SwitchBetweenLayouts" xml:space="preserve">
+    <value>Конверт между языками</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="MahouUpdate" xml:space="preserve">
+    <value>Mahou обновления</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Проверить обновления</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Проверяю...</value>
+  </data>
+  <data name="Release" xml:space="preserve">
+    <value>Релиза</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="UpdateMahouTo" xml:space="preserve">
+    <value>Обновить Mahou к</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Загружаю</value>
+  </data>
+  <data name="TimedOut" xml:space="preserve">
+    <value>Превышено время ожидания...</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="YouHaveLatestVersion" xml:space="preserve">
+    <value>У вас последняя версия.</value>
+  </data>
+  <data name="YouNeedToUpdate" xml:space="preserve">
+    <value>Я думаю следует обновиться...</value>
+  </data>
+  <data name="ErrorOccuredDuringCheck" xml:space="preserve">
+    <value>Произошла ошибка при проверке...</value>
+  </data>
+  <data name="FailedToGetUpdate" xml:space="preserve">
+    <value>Не получилось получить информацию о обновлениях, не могу соединится с 'github.com', проверьте ваше соединение с интернетом или настройки прокси.</value>
+  </data>
+  <data name="UseSpecificLayoutChangingByLeftRightCTRLS" xml:space="preserve">
+    <value>Использовать спец. переключение по L/R CTRL</value>
+  </data>
+  <data name="LCtrlSwitchesTo" xml:space="preserve">
+    <value>LCtrl переключает в:</value>
+  </data>
+  <data name="RCtrlSwitchesTo" xml:space="preserve">
+    <value>RCtrl переключает в:</value>
+  </data>
+  <data name="MoreConfigs" xml:space="preserve">
+    <value>Дополнительные настройки</value>
+  </data>
+  <data name="SymbolIgnore" xml:space="preserve">
+    <value>Игнор. символов:</value>
+  </data>
+  <data name="MoreTries" xml:space="preserve">
+    <value>Больше попыток:</value>
+  </data>
+  <data name="ShowHide" xml:space="preserve">
+    <value>Показать/Скрыть</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="MahouAMagicalLayoutSwitcher" xml:space="preserve">
+    <value>Mahou (魔法) Волшебный переключатель раскладок.</value>
+  </data>
+  <data name="DisplayLanguage" xml:space="preserve">
+    <value>Отображ. язык:</value>
+  </data>
+  <data name="RefreshRatems" xml:space="preserve">
+    <value>Скор. обнов.(мс):</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Цвета:</value>
+  </data>
+  <data name="Proxy" xml:space="preserve">
+    <value>Прокси</value>
+  </data>
+  <data name="Serverport" xml:space="preserve">
+    <value>Сервер:порт</value>
+  </data>
+  <data name="NamePassword" xml:space="preserve">
+    <value>Имя/Пароль</value>
+  </data>
+  <data name="YourProxyNotWorking" xml:space="preserve">
+    <value>Ваш прокси не работает...</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Размер:</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Позиция:</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Еще</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="DoubleHotkey" xml:space="preserve">
+    <value>Двойные гор. клавиши:</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Ожидание:</value>
+  </data>
+  <data name="ExperimentalCSSwitch" xml:space="preserve">
+    <value>Экспериментальный КВ-Ключ+</value>
+  </data>
+  <data name="TransparentBackgroundInLanguageTooltip" xml:space="preserve">
+    <value>Прозрачный фон в подсказке языка</value>
+  </data>
+  <data name="UseSnippets" xml:space="preserve">
+    <value>Использовать сниппеты</value>
+  </data>
+  <data name="OnChange" xml:space="preserve">
+    <value>При смене</value>
+  </data>
+  <data name="HighlightScrollLockWhenLanguage1IsActive" xml:space="preserve">
+    <value>Подсвечивать ScrollLock когда язык 1 активен.</value>
+  </data>
+  <data name="EnableCheckForUpdatesAtStartup" xml:space="preserve">
+    <value>Проверять обновления при запуске.</value>
+  </data>
+  <data name="ConvertMultipleWordsHotkey" xml:space="preserve">
+    <value>Конверт нескольких последних слов гор. клав.:</value>
+  </data>
+  <data name="EnableLoggingForDebugging" xml:space="preserve">
+    <value>Включить логирование для поиска ошибок.</value>
+  </data>
+  <data name="WhileThisOptionEnabled" xml:space="preserve">
+    <value>Пока включена, [Конверт слова] and [Конверт линии] and [Конверт выделения с "КВ-Ключ" включенной]
+будет переключать раскладку циклично, вместо переключения между выбранными в настройках.
+Этот режим работает с бОльшим количеством програм.
+Если есть программа в которой [Конверт слова] или [Конверт линии] или [Конверт выделения с "КВ-Ключ" включенной] не работают,
+то попробуйте включить эту функцию.
+Если у вас только 2 раскладки ОЧЕНЬ РЕКОМЕНДУЕТСЯ включить ее, и "Эму".</value>
+  </data>
+  <data name="HotkeyForConvertWordPress" xml:space="preserve">
+    <value>Текущая горячая клавиша для "Конверт слова".
+Нажмите любую клавишу чтобы назначить её, или клавишу с модификаторами(ALT,CTRL,SHIFT).</value>
+  </data>
+  <data name="HotkeyForConvertSelectionPress" xml:space="preserve">
+    <value>Текущая горячая клавиша для "Конверт выделения".
+Нажмите любую клавишу чтобы назначить её, или клавишу с модификаторами(ALT,CTRL,SHIFT).</value>
+  </data>
+  <data name="HotkeyForConvertLinePress" xml:space="preserve">
+    <value>Текущая горячая клавиша для "Конверт линии".
+Нажмите любую клавишу чтобы назначить её, или клавишу с модификаторами(ALT,CTRL,SHIFT).</value>
+  </data>
+  <data name="GoToGitHubRepositoryToViewSourceOrReportIssue" xml:space="preserve">
+    <value>Открыть репозиторий на GitHub чтобы посмотреть исходный код или сообщить об ошибке.</value>
+  </data>
+  <data name="TogglesVisibilityOfIconInATray" xml:space="preserve">
+    <value>Переключает видимость иконки в трее.
+Если скрыта то чтобы показать главное окно нажмите CTRL+ALT+SHIFT+INSERT или просто запустите Mahou.exe опять.</value>
+  </data>
+  <data name="CheckForUpdatesAndUpdateIfNeeded" xml:space="preserve">
+    <value>Проверить обновления, и обновиться если требуется.</value>
+  </data>
+  <data name="BlocksHotkeysThatUseControl" xml:space="preserve">
+    <value>Игнорирует горячую клавишу которая использует Control,
+когда "Сменить язык клавишой" установлен на Left/Right Control.</value>
+  </data>
+  <data name="SwitchingLayoutDependsOnCycleModeEmuOptions" xml:space="preserve">
+    <value>Тип переключения зависит от "Циклч. режим" и "Эму".</value>
+  </data>
+  <data name="CycleModeWillUseEmulationOf" xml:space="preserve">
+    <value>Если включеня, Циклч. режим будет испльзовать Эмуляцию нажатия Alt+Shift/Win+Space вместо "посылания сообщения окну" которое переключает раскладку.</value>
+  </data>
+  <data name="CovertSelectionUseLayoutSwitching" xml:space="preserve">
+    <value>Если включена, Конверт выделения будет использовать переключение раскладки.
+Все символы будут написаны как надо.(нет проблем с символами)</value>
+  </data>
+  <data name="OnlyWorksWhenCycleModeIsOFF" xml:space="preserve">
+    <value>Работает только если Циклч. режим выключен.</value>
+  </data>
+  <data name="ModifiersWillBeRepressed" xml:space="preserve">
+    <value>Если включена, модификаторы будут нажаты снова после конвертации.
+Благодаря новому типу горячих клавиш, модификаторы не залипнут НИКОГДА(рекомендуется).</value>
+  </data>
+  <data name="PressingONESpaceAFTERWordWillNotClearLastWord" xml:space="preserve">
+    <value>Если включена, нажатие ОДНОГО Space ПОСЛЕ слова не очистит полседнее слово.</value>
+  </data>
+  <data name="EnablingThisWillReselectText" xml:space="preserve">
+    <value>Если включена, текст будет снова выделен после "Конверт выделения".</value>
+  </data>
+  <data name="SelectTypeForEmulateChangeLayout" xml:space="preserve">
+    <value>Выберите тип эмуляции переключения раскладки.
+Win+Space работает только в Windows 10!!
+Win+Space также в Metro приложениях работает лучше чем Alt+Shift.</value>
+  </data>
+  <data name="PressingLCtrlWillSwitchLayout" xml:space="preserve">
+    <value>Нажатие LCtrl переключит раскладку в выбраную.</value>
+  </data>
+  <data name="PressingRCtrlWillSwitchLayout" xml:space="preserve">
+    <value>Pressing RCtrl переключит раскладку в выбраную.</value>
+  </data>
+  <data name="EnablingThisWillDisable" xml:space="preserve">
+    <value>Включение этой функции отключает LCtrl/RCtrl из "Сменить язык клавишой".
+Пока включена, нажатие LCtrl/RCtrl будет переключать раскладку в выдбраную.</value>
+  </data>
+  <data name="EmuType" xml:space="preserve">
+    <value>Тип эмуляции</value>
+  </data>
+  <data name="SymbolsWillBeIgnored" xml:space="preserve">
+    <value>Если включен, символы []{};':",./&lt;&gt;? будут игнорироваться и не будут конвертированы.
+Работает в Конверт слова, Конверт линии, Конверт выделения с Циклч. режим и КВ-Ключ включенными.
+Не будет работатб если у вас &gt;2 раскладок и Циклч. режим включен!</value>
+  </data>
+  <data name="EnablesMoreTriesToGetSelectedTextInConvertSelection" xml:space="preserve">
+    <value>Включает несколько попыток взятия выделенного текста в Конверт выделения.</value>
+  </data>
+  <data name="MouseCursorHoversTextItWillDisplayASmallTipOfWhatLangaugeIsNowUsing" xml:space="preserve">
+    <value>Если включено, то при наведении мыши на текстовую форму будет показана маленькая подсказка о текущем языке ввода.</value>
+  </data>
+  <data name="SpeedOfCheckingCursorTypeifItEqualsI" xml:space="preserve">
+    <value>Скорость проверки курсора мыши.(равен ли он "I", при наведении на текст/текстовую форму))</value>
+  </data>
+  <data name="ColorsAndFontOfSmallTipLeftForegroundRightBackground" xml:space="preserve">
+    <value>Цвета и шрифт маленькой подсказки.(Слева - цвет текста, Справав - цвет фона)</value>
+  </data>
+  <data name="SizeOfLanguageTooltip" xml:space="preserve">
+    <value>Размер подсказки языка возле курсора.</value>
+  </data>
+  <data name="PositionRelativeToMousePosition" xml:space="preserve">
+    <value>Позиция относительно позиции курсора.</value>
+  </data>
+  <data name="EnablesDoubleHotkeyAbilityandMakesItPossibleToSetModifiesToHotkey" xml:space="preserve">
+    <value>Включает возможность двойных горячих клавиш,
+и возможность назначить только модификатор на горячую клавишу</value>
+  </data>
+  <data name="TimeToWaitSecondHotkeyPressms" xml:space="preserve">
+    <value>Время ожидания второго нажатия(мс)</value>
+  </data>
+  <data name="CombinesSomeAbilities" xml:space="preserve">
+    <value>Совмещает некоторые возможности Конверт выделения с КВ-Ключ включенным и когда выключен.(Для работы включите КВ-Ключ)
+Возможности:
+1.Конвертирование из разных языков за 1 конверт.
+2.Игнор. символов работает здесь.
+3.Авто-распознование языка текста(не все символы(те которые есть в обеих раскладках) могут быть распознаны правильно если выбран неправильный язык изначально)
+4.Возможность конвертирование символов которые есть в обеих раскладках по разному если менять язык перед конвертацией.</value>
+  </data>
+  <data name="MakesBackgroundOfLanguage" xml:space="preserve">
+    <value>Делает фон подсказки языка прозрачным.
+Не забудьте поменять цвет текста.(т.к. "Белый" по умолчанию)
+Некоторые шрифты могут выглядеть не очень, попробуйте поменять шрифт.("Georgia" или "Palatino Linotype" рекоммендуется)</value>
+  </data>
+  <data name="PressingSpaceExpandSmallWordToBig" xml:space="preserve">
+    <value>Если включено, нажатие Space превратит маленькое (то что начинается с "-&gt;") слово, в большое(то что между "====&gt;" и "&lt;====") слово/кусок текста.</value>
+  </data>
+  <data name="DisplayLanguageTooltip" xml:space="preserve">
+    <value>Показывает подсказку только при смене языка.
+Время отображения = 7x[Скор. обнов.].</value>
+  </data>
+  <data name="HighlightScrollLockWhenActiveLanguage1" xml:space="preserve">
+    <value>Подсвечивает лампочку Scroll Lock при активации языка 1, выбранного в главном окне.</value>
+  </data>
+  <data name="CheckForUpdatesTooltip" xml:space="preserve">
+    <value>Если включено Mahou будет проверять обновления при запуске.</value>
+  </data>
+  <data name="AllowToConvertSpecificLastWord" xml:space="preserve">
+    <value>Позволяет конвертировать выбранное количество последних слов нажатием горячей клавиши, а потом 1-9 на клавиатуре.</value>
+  </data>
+  <data name="DesignedONLYToSearchForErrors" xml:space="preserve">
+    <value>Предназначенно ТОЛЬКО для поиска ошибок, логи сохраняются в папке Mahou, в папке Logs.</value>
+  </data>
+  <data name="MahouSuccessfullyUpdated" xml:space="preserve">
+    <value>Mahou успешно обновлен!</value>
+  </data>
+  <data name="UpdateComplete" xml:space="preserve">
+    <value>Обновление завершено!</value>
+  </data>
+  <data name="CommonToolTop" xml:space="preserve">
+    <value>Нажмите Pause(по умолчанию) для конвертации последнего введенного слова.
+Нажмите Scroll(по умолчанию) пока выделенный текс в фокусе чтобы конвертивровать его.
+Нажмите Shift+Pause(по умолчанию) для конвертации последней введенной линии.
+Нажмите Ctrl+Alt+Shift+Insert чтобы показать/скрыть главное окно.
+Нажмите Ctrl+Alt+Shift+F12 чтобы завершить Mahou.
+
+*Заметьте что если you вводите текст не из выбранных раскладок в настройках, то конвертация конвертирует текст в Язык 1(Не актуально если включен Циклич. режим).
+
+**Если у Вас проблемы с символами при Конвертации выделения попробуйте "перключить языки местами (1=&gt;2 &amp; 2=&gt;1)" или включите "КВ-Ключ".
+
+Наведите мышь на любой элемент главного онка чтобы узнать подробнее о нем.
+
+************WINDOWS 10 Metro приложения************
+Включите "Циклч. режим", "Эму" и установите тип эмуляции на"Win+Space" эти настройки работают лучше для Metro приложений.
+
+Для Mahou.ini in Mahou folder.
+
+Удачи.</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>****ВНИМАНИЕ****</value>
+  </data>
+  <data name="YouHaveAssignedSameHotkeys" xml:space="preserve">
+    <value>Вы установили одну и ту же горячую клавишу для Конверт слова и Конверт линии, это невозможно!!</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Внимание!</value>
+  </data>
+  <data name="PressedModifiersForConvertWordHotkey" xml:space="preserve">
+    <value>Вы нажали только модификаторы для Конверт слова!!</value>
+  </data>
+  <data name="PressedModifiersForConvertSelectionHotkey" xml:space="preserve">
+    <value>Вы нажали только модификаторы для Конверт выделения!!</value>
+  </data>
+  <data name="YouHavePressedJustModifiersForConvertLineHotkey" xml:space="preserve">
+    <value>Вы нажали только модификаторы для Конверт линии!!</value>
+  </data>
+  <data name="YouHaveRemovedSelectedLocalesReselect" xml:space="preserve">
+    <value>Вы убрали выбранные ранее раскладки, выберите заново.</value>
+  </data>
+  <data name="SnippetsConfiguredWrong" xml:space="preserve">
+    <value>Сниппеты настроены не правильно...</value>
+  </data>
+  <data name="MahouSnippetsError" xml:space="preserve">
+    <value>Mahou ошибка сниппетов!</value>
+  </data>
+  <data name="UsingCapsLockProduceIssues" xml:space="preserve">
+    <value>Использование CapsLock в горячей клавише с CapsLock назначенным на [Сменить язык клавишей] вызовет проблемы, отключите или переключите на другую клавишу функцию [Сменить язык клавишей].</value>
+  </data>
+  <data name="HotkeyWithCapsLockWarning" xml:space="preserve">
+    <value>Внимание клавиша с CapsLock!</value>
+  </data>
+  <data name="LoggingDisabled" xml:space="preserve">
+    <value>Логирование выключенно из-за более 10 ошибок логгинга, последняя ошибка:</value>
+  </data>
+</root>

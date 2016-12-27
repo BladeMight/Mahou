@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.IO;
+using Mahou.Resources.Strings;
+
 namespace Mahou
 {
 	public partial class MoreConfigs : Form
@@ -295,30 +297,30 @@ namespace Mahou
 		}
 		void RefreshLanguage() // Refreshes controls text
 		{
-			cbUseLRC.Text = MMain.UI[36];
-			lbLCto.Text = MMain.UI[37];
-			lbRCto.Text = MMain.UI[38];
-			Text = MMain.UI[39];
-			cbSymIgn.Text = MMain.UI[40];
-			cbMoreTries.Text = MMain.UI[41];
-			btnNO.Text = MMain.UI[19];
-			cbDisplayLang.Text = MMain.UI[45];
-			lblRefRate.Text = MMain.UI[46];
-			lbColors.Text = MMain.UI[47];
-			btFont.Text = MMain.UI[52];
-			lbSize.Text = MMain.UI[53];
-			lbPosition.Text = MMain.UI[54];
-			btnEMore.Text = !pEExtra.Visible ? MMain.UI[55] : MMain.UI[56];
-			cbDoublePress.Text = MMain.UI[57];
-			lbDDelay.Text = MMain.UI[58];
-			cbExCSSwitch.Text = MMain.UI[59];
-			cbTrBLT.Text = MMain.UI[60];
-			cbUseSnippets.Text = MMain.UI[61];
-			cbOnChange.Text = MMain.UI[62];
-			cbScrollLight.Text 	= MMain.UI[63];
-			cbCheckForUPD.Text = MMain.UI[64];
-			lbConMorWor.Text = MMain.UI[65];
-			cbLogging.Text = MMain.UI[66];
+			cbUseLRC.Text = Strings.UseSpecificLayoutChangingByLeftRightCTRLS;
+			lbLCto.Text = Strings.LCtrlSwitchesTo;
+			lbRCto.Text = Strings.RCtrlSwitchesTo;
+			Text = Strings.MoreConfigs;
+			cbSymIgn.Text = Strings.SymbolIgnore;
+			cbMoreTries.Text = Strings.MoreTries;
+			btnNO.Text = Strings.Cancel;
+			cbDisplayLang.Text = Strings.DisplayLanguage;
+			lblRefRate.Text = Strings.RefreshRatems;
+			lbColors.Text = Strings.Colors;
+			btFont.Text = Strings.Font;
+			lbSize.Text = Strings.Size;
+			lbPosition.Text = Strings.Position;
+			btnEMore.Text = !pEExtra.Visible ? Strings.More : Strings.Back;
+			cbDoublePress.Text = Strings.DoubleHotkey;
+			lbDDelay.Text = Strings.Delay;
+			cbExCSSwitch.Text = Strings.ExperimentalCSSwitch;
+			cbTrBLT.Text = Strings.TransparentBackgroundInLanguageTooltip;
+			cbUseSnippets.Text = Strings.UseSnippets;
+			cbOnChange.Text = Strings.OnChange;
+			cbScrollLight.Text 	= Strings.HighlightScrollLockWhenLanguage1IsActive;
+			cbCheckForUPD.Text = Strings.EnableCheckForUpdatesAtStartup;
+			lbConMorWor.Text = Strings.ConvertMultipleWordsHotkey;
+			cbLogging.Text = Strings.EnableLoggingForDebugging;
 			Logging.Log("More Configs UI language refreshed.");
 		}
 		#endregion

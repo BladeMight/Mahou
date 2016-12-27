@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Mahou.Resources.Strings;
+
 namespace Mahou
 {
 	class MMain
@@ -52,7 +54,7 @@ namespace Mahou
 					mahou = new MahouForm();
 					InitLanguage();
 					//Refreshes icon text language at startup
-					mahou.icon.RefreshText(MMain.UI[44], MMain.UI[42], MMain.UI[43]);
+					mahou.icon.RefreshText(Strings.MahouAMagicalLayoutSwitcher, Strings.ShowHide, Strings.Exit);
 					KMHook.ReInitSnippets();
 					Application.EnableVisualStyles(); // Huh i did not noticed that it was missing... '~'
 					if (args.Length != 0)

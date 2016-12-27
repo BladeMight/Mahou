@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	  <data name="ViewOnGithub" xml:space="preserve">
+    <value>View on Github</value>
+  </data>
+  <data name="AutostartWithWindows" xml:space="preserve">
+    <value>Autostart with Windows</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Hotkeys" xml:space="preserve">
+    <value>Hotkeys</value>
+  </data>
+  <data name="ConvertWord" xml:space="preserve">
+    <value>Convert word</value>
+  </data>
+  <data name="ConvertSelection" xml:space="preserve">
+    <value>Convert selection</value>
+  </data>
+  <data name="ConvertLine" xml:space="preserve">
+    <value>Convert line</value>
+  </data>
+  <data name="CSSwitch" xml:space="preserve">
+    <value>CS-Switch</value>
+  </data>
+  <data name="RePress" xml:space="preserve">
+    <value>Re-Press</value>
+  </data>
+  <data name="ReSelect" xml:space="preserve">
+    <value>Re-Select</value>
+  </data>
+  <data name="SwitchLayoutByKey" xml:space="preserve">
+    <value>Switch layout by key:</value>
+  </data>
+  <data name="BlockCTRL" xml:space="preserve">
+    <value>Block CTRL</value>
+  </data>
+  <data name="TrayIcon" xml:space="preserve">
+    <value>Tray icon</value>
+  </data>
+  <data name="CycleMode" xml:space="preserve">
+    <value>Cycle Mode</value>
+  </data>
+  <data name="Emu" xml:space="preserve">
+    <value>Emu</value>
+  </data>
+  <data name="SwitchBetweenLayouts" xml:space="preserve">
+    <value>Switch between layouts</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MahouUpdate" xml:space="preserve">
+    <value>Mahou update</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+  </data>
+  <data name="Checking" xml:space="preserve">
+    <value>Checking...</value>
+  </data>
+  <data name="Release" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="UpdateMahouTo" xml:space="preserve">
+    <value>Update Mahou to</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="TimedOut" xml:space="preserve">
+    <value>Timed out...</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="YouHaveLatestVersion" xml:space="preserve">
+    <value>You have latest version.</value>
+  </data>
+  <data name="YouNeedToUpdate" xml:space="preserve">
+    <value>I think you need to update...</value>
+  </data>
+  <data name="ErrorOccuredDuringCheck" xml:space="preserve">
+    <value>Error occured during check...</value>
+  </data>
+  <data name="FailedToGetUpdate" xml:space="preserve">
+    <value>Failed to get Update info, can't connent to 'github.com', check your internet connection or proxy configuration.</value>
+  </data>
+  <data name="UseSpecificLayoutChangingByLeftRightCTRLS" xml:space="preserve">
+    <value>Use specific layout changing by Left/Right CTRLS</value>
+  </data>
+  <data name="LCtrlSwitchesTo" xml:space="preserve">
+    <value>LCtrl switches to:</value>
+  </data>
+  <data name="RCtrlSwitchesTo" xml:space="preserve">
+    <value>RCtrl switches to:</value>
+  </data>
+  <data name="MoreConfigs" xml:space="preserve">
+    <value>More configs</value>
+  </data>
+  <data name="SymbolIgnore" xml:space="preserve">
+    <value>Symbol Ignore:</value>
+  </data>
+  <data name="MoreTries" xml:space="preserve">
+    <value>More Tries:</value>
+  </data>
+  <data name="ShowHide" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MahouAMagicalLayoutSwitcher" xml:space="preserve">
+    <value>Mahou (魔法) A magical layout switcher.</value>
+  </data>
+  <data name="DisplayLanguage" xml:space="preserve">
+    <value>Display language:</value>
+  </data>
+  <data name="RefreshRatems" xml:space="preserve">
+    <value>Refresh rate(ms):</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Colors:</value>
+  </data>
+  <data name="Proxy" xml:space="preserve">
+    <value>Proxy</value>
+  </data>
+  <data name="Serverport" xml:space="preserve">
+    <value>Server:port</value>
+  </data>
+  <data name="NamePassword" xml:space="preserve">
+    <value>Name/Password</value>
+  </data>
+  <data name="YourProxyNotWorking" xml:space="preserve">
+    <value>Your proxy not working...</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size:</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="DoubleHotkey" xml:space="preserve">
+    <value>Double hotkey:</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="ExperimentalCSSwitch" xml:space="preserve">
+    <value>Experimental CS-Switch+</value>
+  </data>
+  <data name="TransparentBackgroundInLanguageTooltip" xml:space="preserve">
+    <value>Transparent background in language tooltip</value>
+  </data>
+  <data name="UseSnippets" xml:space="preserve">
+    <value>Use snippets</value>
+  </data>
+  <data name="OnChange" xml:space="preserve">
+    <value>On change</value>
+  </data>
+  <data name="HighlightScrollLockWhenLanguage1IsActive" xml:space="preserve">
+    <value>Highlight ScrollLock when language 1 is active.</value>
+  </data>
+  <data name="EnableCheckForUpdatesAtStartup" xml:space="preserve">
+    <value>Enable check for updates at startup.</value>
+  </data>
+  <data name="ConvertMultipleWordsHotkey" xml:space="preserve">
+    <value>Convert multiple words hotkey:</value>
+  </data>
+  <data name="EnableLoggingForDebugging" xml:space="preserve">
+    <value>Enable logging for debugging.</value>
+  </data>
+  <data name="WhileThisOptionEnabled" xml:space="preserve">
+    <value>While this option enabled, [Convert word] and [Convert line] and [Convert selection with "CS-Switch" enabled]
+will just cycle between all locales instead of switching between selected in settings.
+This mode works for almost all programs.
+If there is program in which [Convert word] or [Convert line] or [Convert selection with "CS-Switch" enabled] not work,
+try with this option enabled.
+If you have just 2 layouts(input languages) it is HIGHLY RECOMMENDED to turn it ON, and "Emu" too to ON.</value>
+  </data>
+  <data name="HotkeyForConvertWordPress" xml:space="preserve">
+    <value>This is current hotkey for "Convert word".
+Press any key to assign it, or key with modifiers(ALT,CTRL,SHIFT).</value>
+  </data>
+  <data name="HotkeyForConvertSelectionPress" xml:space="preserve">
+    <value>This is current hotkey for "Convert selection".
+Press any key to assign it, or key with modifiers(ALT,CTRL,SHIFT).</value>
+  </data>
+  <data name="HotkeyForConvertLinePress" xml:space="preserve">
+    <value>This is current hotkey for "Convert line".
+Press any key to assign it, or key with modifiers(ALT,CTRL,SHIFT)</value>
+  </data>
+  <data name="GoToGitHubRepositoryToViewSourceOrReportIssue" xml:space="preserve">
+    <value>Go to GitHub repository to view source or report issue.</value>
+  </data>
+  <data name="TogglesVisibilityOfIconInATray" xml:space="preserve">
+    <value>Toggles visibility of icon in a tray.
+If it is hidden, to show configs window hit CTRL+ALT+SHIFT+INSERT or just run Mahou.exe again.</value>
+  </data>
+  <data name="CheckForUpdatesAndUpdateIfNeeded" xml:space="preserve">
+    <value>Check for updates, and update if needed.</value>
+  </data>
+  <data name="BlocksHotkeysThatUseControl" xml:space="preserve">
+    <value>Blocks hotkeys that use Control,
+when "Switch layout by key" is set to Left/Right Control.</value>
+  </data>
+  <data name="SwitchingLayoutDependsOnCycleModeEmuOptions" xml:space="preserve">
+    <value>Switching layout depends on "Cycle Mode" and "Emu" options</value>
+  </data>
+  <data name="CycleModeWillUseEmulationOf" xml:space="preserve">
+    <value>If this option enabled, Cycle Mode will use Emulation of Alt+Shift/Win+Space instead "sending window message" that changes layout.</value>
+  </data>
+  <data name="CovertSelectionUseLayoutSwitching" xml:space="preserve">
+    <value>If this option enabled, Covert selection will use layout switching.
+All characters will be rewriten as they must.(no problems with symbols
+There also an CS-Switch+ in More Configs page 2.</value>
+  </data>
+  <data name="OnlyWorksWhenCycleModeIsOFF" xml:space="preserve">
+    <value>Only works when Cycle Mode is OFF.</value>
+  </data>
+  <data name="ModifiersWillBeRepressed" xml:space="preserve">
+    <value>If enabled, modifiers will be repressed after conversion.
+Due to new hotkey managment modifiers NEVER stuck(recommenden).</value>
+  </data>
+  <data name="PressingONESpace" xml:space="preserve">
+    <value>If enabled, pressing ONE space AFTER word will not clear last word.</value>
+  </data>
+  <data name="EnablingThisWillReselectText" xml:space="preserve">
+    <value>Enabling this, will reselect text after "Convert selection".</value>
+  </data>
+  <data name="SelectTypeForEmulateChangeLayout" xml:space="preserve">
+    <value>Select type for Emulate change layout.
+Win+Space works only in Windows 10!!
+Win+Space also will work better in Metro apps.</value>
+  </data>
+  <data name="PressingLCtrlWillSwitchLayout" xml:space="preserve">
+    <value>Pressing LCtrl will switch layout to selected.</value>
+  </data>
+  <data name="PressingRCtrlWillSwitchLayout" xml:space="preserve">
+    <value>Pressing RCtrl will switch layout to selected.</value>
+  </data>
+  <data name="EnablingThisWillDisable" xml:space="preserve">
+    <value>Enabling this will disable LCtrl/RCtrl from "Switch layout by key".
+While this enabled pressing LCtrl/RCtrl will switch to specified layout.</value>
+  </data>
+  <data name="EmuType" xml:space="preserve">
+    <value>Emu Type</value>
+  </data>
+  <data name="SymbolsWillBeIgnored" xml:space="preserve">
+    <value>If enabled, symbols []{};':",./&lt;&gt;"? will be ignored and will not be converted.
+Works in Convert word, Convert line, Convert selection with Cylce Mode and CS-Switch enabled.
+Won't work if you have &gt;2 layouts an Cycle Mode enabled!</value>
+  </data>
+  <data name="EnablesMoreTriesToGetSelectedTextInConvertSelection" xml:space="preserve">
+    <value>Enables more tries to get selected text in Convert selection.</value>
+  </data>
+  <data name="MouseCursorHoversTextItWillDisplayASmallTipOfWhatLangaugeIsNowUsing" xml:space="preserve">
+    <value>If enabled, mouse cursor hovers text it will display a small tip of what langauge is now using.</value>
+  </data>
+  <data name="SpeedOfCheckingCursorTypeifItEqualsI" xml:space="preserve">
+    <value>Speed of checking cursor type.(if it equals "I" )</value>
+  </data>
+  <data name="ColorsAndFontOfSmallTipLeftForegroundRightBackground" xml:space="preserve">
+    <value>Colors and font of small tip.(Left - foreground, Right - background)</value>
+  </data>
+  <data name="SizeOfLanguageTooltip" xml:space="preserve">
+    <value>Size of language tooltip.</value>
+  </data>
+  <data name="PositionRelativeToMousePosition" xml:space="preserve">
+    <value>Position relative to mouse position.</value>
+  </data>
+  <data name="EnablesDoubleHotkeyAbility" xml:space="preserve">
+    <value>Enables double hotkey ability,
+and makes it possible to set modifies to hotkey.</value>
+  </data>
+  <data name="TimeToWaitSecondHotkeyPressms" xml:space="preserve">
+    <value>Time to wait second hotkey press(ms)</value>
+  </data>
+  <data name="CombinesSomeAbilities" xml:space="preserve">
+    <value>Combines some abilities of Convert selection with enabled CS-Switch and when it disabled.(Enable CS-Switch for it to work)
+It can:
+1.Conversion from multiple languages at once.
+2.Ignore symbols feature work in it.
+3.Auto get language of text(not all symbols(the ones that exist in both layouts) can be rightly recognized if wrong layout selected from begin)
+4.Ability to convert symbols that exist in both layouts different if change layout before conversion.</value>
+  </data>
+  <data name="MakesBackgroundOfLanguage" xml:space="preserve">
+    <value>Makes background of language tooltip transparent.
+Don't forget to change text color.(because "White" is default)
+Some fonts may look bad, try changing to another.("Georgia" or "Palatino Linotype" is recommend)</value>
+  </data>
+  <data name="PressingSpace" xml:space="preserve">
+    <value>If this enabled, pressing Space will expand small (which starts with "-&gt;") word, to big (which is between "====&gt;" and "&lt;====") word/text fragment.</value>
+  </data>
+  <data name="DisplayLanguageTooltip" xml:space="preserve">
+    <value>Display language tooltip only on layout change.
+Time of displaying is 7x[Refresh rate].</value>
+  </data>
+  <data name="HighlightScrollLock" xml:space="preserve">
+    <value>Highlight Scroll Lock when active language 1, selected in main window.</value>
+  </data>
+  <data name="CheckForUpdatesTooltip" xml:space="preserve">
+    <value>If enabled Mahou will check for updates at startup.</value>
+  </data>
+  <data name="AllowToConvertSpecificLastWord" xml:space="preserve">
+    <value>Allow to convert specific last word count by pressing hotkey and then 1-9 on keyboard.</value>
+  </data>
+  <data name="DesignedONLYToSearchForErrors" xml:space="preserve">
+    <value>Designed ONLY to search for errors, logs are saved in Mahou's folder, in folder Logs.</value>
+  </data>
+  <data name="MahouSuccessfullyUpdated" xml:space="preserve">
+    <value>Mahou successfully updated!</value>
+  </data>
+  <data name="UpdateComplete" xml:space="preserve">
+    <value>Update complete!</value>
+  </data>
+  <data name="CommonToolTop" xml:space="preserve">
+    <value>Press Pause(by Default) to convert last inputted word.
+Press Scroll(by Default) while selected text is focused to convert it.
+Press Shift+Pause(by Default) to convert last inputted line.
+Press Ctrl+Alt+Shift+Insert to show Mahou main window.
+Press Ctrl+Alt+Shift+F12 to shutdown Mahou.
+
+*Note that if you typing in not of selected in settings layouts(locales/languages), conversion will switch typed text to Language 1(Ignored if Cycle Mode is ON).
+
+**If you have problems with symbols conversion(selection) try "switching languages (1=&gt;2 &amp; 2=&gt;1)" or "CS-Switch" option.
+
+Hover on any control of main window for more info about it.
+
+************WINDOWS 10 USERS WHO USE METRO APPS************
+Enable "Cycle Mode", "Emu" and set Emu type to "Win+Space" these settings work better for Metro apps.
+
+To reset settings just delete Mahou.ini in Mahou folder.
+
+Regards.</value>
+  </data>
+  <data name="Attention" xml:space="preserve">
+    <value>****Attention****</value>
+  </data>
+  <data name="YouHaveAssignedSameHotkeys" xml:space="preserve">
+    <value>You have assigned same hotkeys for Convert word &amp; Convert line, that is impossible!!</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="PressedModifiersForConvertWordHotkey" xml:space="preserve">
+    <value>You have pressed just modifiers for Convert word hotkey!!</value>
+  </data>
+  <data name="PressedModifiersForConvertSelectionHotkey" xml:space="preserve">
+    <value>You have pressed just modifiers for Convert selection hotkey!!</value>
+  </data>
+  <data name="YouHavePressedJustModifiersForConvertLineHotkey" xml:space="preserve">
+    <value>You have pressed just modifiers for Convert line hotkey!!</value>
+  </data>
+  <data name="YouHaveRemovedSelectedLocalesReselect" xml:space="preserve">
+    <value>You have removed selected locales, reselect.</value>
+  </data>
+  <data name="SnippetsConfiguredWrong" xml:space="preserve">
+    <value>Snippets configured wrong...</value>
+  </data>
+  <data name="MahouSnippetsError" xml:space="preserve">
+    <value>Mahou snippets error!</value>
+  </data>
+  <data name="UsingCapsLockProduceIssues" xml:space="preserve">
+    <value>Using CapsLock with CapsLock assigned as [Switch Only Key] will produce issues, disable [Switch Only Key] feature or assign it to another key.</value>
+  </data>
+  <data name="HotkeyWithCapsLockWarning" xml:space="preserve">
+    <value>Hotkey with CapsLock warning!</value>
+  </data>
+  <data name="LoggingDisabled" xml:space="preserve">
+    <value>Logging disabled due to 10+ logging errors, last error:</value>
+  </data>
+</root>

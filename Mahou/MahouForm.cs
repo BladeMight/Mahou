@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using Mahou.Resources.Strings;
+
 namespace Mahou
 {
 	public partial class MahouForm : Form
@@ -608,29 +610,29 @@ namespace Mahou
 		}
 		void RefreshLanguage() //Refreshed in realtime all controls text
 		{
-			GitHubLink.Text = MMain.UI[0];
-			cbAutorun.Text = MMain.UI[1];
-			btnUpd.Text = MMain.UI[2];
-			gbHK.Text = MMain.UI[3];
-			cbCLActive.Text = MMain.UI[4] + ":";
-			cbCSActive.Text = MMain.UI[5] + ":";
-			cbCLineActive.Text = MMain.UI[6] + ":";
-			cbCSSwitch.Text = MMain.UI[7];
-			cbRePress.Text = MMain.UI[8];
-			cbResel.Text = MMain.UI[9];
-			lbswithlayout.Text = MMain.UI[10];
-			cbBlockC.Text = MMain.UI[11];
-			cbTrayIcon.Text = MMain.UI[12];
-			cbCycleMode.Text = MMain.UI[13];
-			cbUseEmulate.Text = MMain.UI[14];
-			gbSBL.Text = MMain.UI[15];
-			lbl1lng.Text = MMain.UI[16] + " 1:";
-			lbl2lng.Text = MMain.UI[16] + " 2:";
-			btnApply.Text = MMain.UI[17];
-			btnOK.Text = MMain.UI[18];
-			btnCancel.Text = MMain.UI[19];
-			btnHelp.Text = MMain.UI[20];
-			icon.RefreshText(MMain.UI[44], MMain.UI[42], MMain.UI[43]);
+			GitHubLink.Text = Strings.ViewOnGithub;
+			cbAutorun.Text = Strings.AutostartWithWindows;
+			btnUpd.Text = Strings.Update;
+			gbHK.Text = Strings.Hotkeys;
+			cbCLActive.Text = Strings.ConvertWord + ":";
+			cbCSActive.Text = Strings.ConvertSelection + ":";
+			cbCLineActive.Text = Strings.ConvertLine + ":";
+			cbCSSwitch.Text = Strings.CSSwitch;
+			cbRePress.Text = Strings.RePress;
+			cbResel.Text = Strings.ReSelect;
+			lbswithlayout.Text = Strings.SwitchLayoutByKey;
+			cbBlockC.Text = Strings.BlockCTRL;
+			cbTrayIcon.Text = Strings.TrayIcon;
+			cbCycleMode.Text = Strings.CycleMode;
+			cbUseEmulate.Text = Strings.Emu;
+			gbSBL.Text = Strings.SwitchBetweenLayouts;
+			lbl1lng.Text = Strings.Language + " 1:";
+			lbl2lng.Text = Strings.Language + " 2:";
+			btnApply.Text = Strings.Apply;
+			btnOK.Text = Strings.OK;
+			btnCancel.Text = Strings.Cancel;
+			btnHelp.Text = Strings.Help;
+			icon.RefreshText(Strings.MahouAMagicalLayoutSwitcher, Strings.ShowHide, Strings.Exit);
 			Logging.Log("Main Window language refreshed.");
 		}
 		public void RefreshIconAll() //Refreshes icon's icon and visibility
