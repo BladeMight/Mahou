@@ -67,9 +67,6 @@ namespace Mahou
             if (String.IsNullOrEmpty(this.Read("Locales", "locale2Lang")))
                 this.Write("Locales", "locale2Lang", ""); //Locale 2 name
 
-            if (String.IsNullOrEmpty(this.Read("Locales", "LANGUAGE")))
-                this.Write("Locales", "LANGUAGE", "EN"); //Language of user interface, messages etc.
-
             //Functions section
             if (!Boolean.TryParse(this.Read("Functions", "IconVisibility"), out bt))
                 this.Write("Functions", "IconVisibility", "true"); //Tray icon visibility

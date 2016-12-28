@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Mahou.Resources.Strings;
 
 namespace Mahou
 {
@@ -294,7 +295,7 @@ namespace Mahou
 							} catch {
 								Logging.Log("Some snippets configured wrong, check them.", 1);
 								// If not use TASK, form(MessageBox) won't accept the keys(Enter/Escape/Alt+F4).
-								var tsk = new Task(() => MessageBox.Show(MMain.Msgs[10], MMain.Msgs[11], MessageBoxButtons.OK, MessageBoxIcon.Error));
+								var tsk = new Task(() => MessageBox.Show(Strings.SnippetsConfiguredWrong, Strings.MahouSnippetsError, MessageBoxButtons.OK, MessageBoxIcon.Error));
 								tsk.Start();
 								KInputs.MakeInput(KInputs.AddString(snip));
 							}

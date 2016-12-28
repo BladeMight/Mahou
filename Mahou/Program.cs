@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Mahou.Resources.Strings;
+
 namespace Mahou
 {
 	class MMain
@@ -50,9 +52,8 @@ namespace Mahou
 					Locales.IfLessThan2();
 				} else {
 					mahou = new MahouForm();
-					InitLanguage();
 					//Refreshes icon text language at startup
-					mahou.icon.RefreshText(MMain.UI[44], MMain.UI[42], MMain.UI[43]);
+					mahou.icon.RefreshText(Strings.MahouAMagicalLayoutSwitcher, Strings.ShowHide, Strings.Exit);
 					KMHook.ReInitSnippets();
 					Application.EnableVisualStyles(); // Huh i did not noticed that it was missing... '~'
 					if (args.Length != 0)
@@ -74,18 +75,6 @@ namespace Mahou
 					StopHook();
 				}
 			}
-		}
-		public static void InitLanguage()
-		{
-			if (MyConfs.Read("Locales", "LANGUAGE") == "RU") {
-				UI = Translation.UIRU;
-				TTips = Translation.ToolTipsRU;
-				Msgs = Translation.MessagesRU;
-			} else if (MyConfs.Read("Locales", "LANGUAGE") == "EN") {
-				UI = Translation.UIEN;
-				TTips = Translation.ToolTipsEN;
-				Msgs = Translation.MessagesEN;
-			}   
 		}
 		#region Actions with hooks
 		public static void StartHook()

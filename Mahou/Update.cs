@@ -8,6 +8,8 @@ using System.IO;
 using System.Drawing;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Mahou.Resources.Strings;
+
 namespace Mahou
 {
 	public partial class Update : Form
@@ -88,7 +90,7 @@ namespace Mahou
 						nPath,
 						fn
 					}));
-					lbDownloading.Text = MMain.UI[29] + " " + fn;
+					lbDownloading.Text = $"{Strings.Downloading} {fn}";
 					animate.Tick += (_, __) => {
 						lbDownloading.Text += ".";
 					};
@@ -106,7 +108,7 @@ namespace Mahou
 							pbStatus.Value = progress = _progress = 0;
 							wc.CancelAsync();
 							updating = false;
-							btDMahou.Text = MMain.UI[30];
+							btDMahou.Text = Strings.TimedOut;
 							tmr.Tick += (o, oo) => {
 								btDMahou.Text = BDMText;
 								tmr.Stop();
@@ -183,22 +185,22 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 		{
 			btnCheck.Visible = false;
 			lbChecking.Visible = true;
-			lbChecking.Text = MMain.UI[23];
-			Task.Factory.StartNew(()=>GetUpdateInfo());
+			lbChecking.Text = Strings.Checking;
+			Task.Factory.StartNew(GetUpdateInfo);
 			tmr.Tick += (_, __) => {
-				btnCheck.Text = MMain.UI[22];
+				btnCheck.Text = Strings.CheckForUpdates;
 				lbChecking.Visible = false;
 				btnCheck.Visible = true;
 				tmr.Stop();
 			};
-			if (UpdInfo[2] == MMain.UI[31]) {
-				lbChecking.Text = MMain.UI[34];
+			if (UpdInfo[2] == Strings.Error) {
+				lbChecking.Text = Strings.ErrorOccuredDuringCheck;
 				tmr.Start();
 				SetUInfo();
 				tmr.Tick += (_, __) => {
-					lbVer.Text = MMain.UI[25];
-					gpRTitle.Text = MMain.UI[26];
-					lbRDesc.Text = MMain.UI[27];
+					lbVer.Text = Strings.Version;
+					gpRTitle.Text = Strings.Title;
+					lbRDesc.Text = Strings.Description;
 					lbChecking.Visible = false;
 					btnCheck.Visible = true;
 					tmr.Stop();
@@ -207,14 +209,14 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 			} else {
 				if (flVersion("v" + Application.ProductVersion) <
 				    flVersion(UpdInfo[2])) {
-					lbChecking.Text = MMain.UI[33];
+					lbChecking.Text = Strings.YouNeedToUpdate;
 					tmr.Start();
 					SetUInfo();
-					btDMahou.Text = MMain.UI[28] + UpdInfo[2];
+					btDMahou.Text = Strings.UpdateMahouTo + UpdInfo[2];
 					btDMahou.Enabled = true;
 					pbStatus.Enabled = true;
 				} else {
-					lbChecking.Text = MMain.UI[32];
+					lbChecking.Text = Strings.YouHaveLatestVersion;
 					tmr.Start();
 					SetUInfo();
 				}
@@ -263,9 +265,9 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 			} catch {
 				Logging.Log("Check for updates failed, error message:", 1);
 				Info = new List<string> {
-					MMain.UI[31],
-					MMain.UI[35],
-					MMain.UI[31]
+					Strings.Error,
+					Strings.FailedToGetUpdate,
+					Strings.Error
 				};
 			}
 			UpdInfo = Info.ToArray();
@@ -279,10 +281,10 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 				Logging.Log("Proxy is " + newUri);
 				myProxy.Address = newUri;
 			} catch {
-				gbProxy.Text = MMain.UI[51];
+				gbProxy.Text = Strings.YourProxyNotWorking;
 				tmr.Interval = 3000;
 				tmr.Tick += (___, ____) => {
-					gbProxy.Text = MMain.UI[48];
+					gbProxy.Text = Strings.Proxy;
 					tmr.Stop();
 				};
 				tmr.Start();
@@ -295,11 +297,11 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 		public void StartupCheck()
 		{
 			Logging.Log("Startup check for updates.");
-			Task.Factory.StartNew(()=>GetUpdateInfo());
+			Task.Factory.StartNew(GetUpdateInfo);
 			try {
 				if (flVersion("v" + Application.ProductVersion) < flVersion(UpdInfo[2])) {
-					if (MessageBox.Show(new Form() { TopMost = true },
-						     UpdInfo[0] + '\n' + UpdInfo[1], "Mahou - " + MMain.UI[33],
+					if (MessageBox.Show(new Form() { TopMost = true }, 
+                        $"{UpdInfo[0]} '\n' {UpdInfo[1]}", $"Mahou - {Strings.YouNeedToUpdate}",
 						     MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.OK) {
 						MMain.mahou.update.StartPosition = FormStartPosition.CenterScreen;
 						fromStartup = true;
@@ -320,15 +322,15 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
 
 		void RefreshLanguage()
 		{
-			Text = MMain.UI[21];
-			btnCheck.Text = MMain.UI[22];
-			btDMahou.Text = MMain.UI[28].Remove(MMain.UI[28].Length - 3, 2);
-			lbVer.Text = MMain.UI[25];
-			gpRTitle.Text = MMain.UI[26];
-			lbRDesc.Text = MMain.UI[27];
-			gbProxy.Text = MMain.UI[48];
-			lbProxy.Text = MMain.UI[49];
-			lbNamePass.Text = MMain.UI[50];
+			Text = Strings.MahouUpdate;
+			btnCheck.Text = Strings.CheckForUpdates;
+			btDMahou.Text = Strings.UpdateMahouTo.Remove(Strings.UpdateMahouTo.Length - 3, 2);
+			lbVer.Text = Strings.Version;
+			gpRTitle.Text = Strings.Title;
+			lbRDesc.Text = Strings.Description;
+			gbProxy.Text = Strings.Proxy;
+			lbProxy.Text = Strings.Serverport;
+			lbNamePass.Text = Strings.NamePassword;
 			Logging.Log("Update UI Language refreshed.");
 		}
 
@@ -356,7 +358,7 @@ DEL ""%MAHOUDIR%UpdateMahou.cmd""";
             {
                 for (int y = 0; y < img.Height; y++)
                 {
-                    if (!(((Color)img.GetPixel(x, y)).ToArgb() + 1 == (Color.Black.ToArgb() * -1)))
+                    if ((img.GetPixel(x, y)).ToArgb() + 1 != (Color.Black.ToArgb() * -1))
                     {
                         img.SetPixel(x, y, col);
                     }
