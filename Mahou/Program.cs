@@ -52,7 +52,6 @@ namespace Mahou
 					Locales.IfLessThan2();
 				} else {
 					mahou = new MahouForm();
-					InitLanguage();
 					//Refreshes icon text language at startup
 					mahou.icon.RefreshText(Strings.MahouAMagicalLayoutSwitcher, Strings.ShowHide, Strings.Exit);
 					KMHook.ReInitSnippets();
@@ -76,18 +75,6 @@ namespace Mahou
 					StopHook();
 				}
 			}
-		}
-		public static void InitLanguage()
-		{
-			if (MyConfs.Read("Locales", "LANGUAGE") == "RU") {
-				UI = Translation.UIRU;
-				TTips = Translation.ToolTipsRU;
-				Msgs = Translation.MessagesRU;
-			} else if (MyConfs.Read("Locales", "LANGUAGE") == "EN") {
-				UI = Translation.UIEN;
-				TTips = Translation.ToolTipsEN;
-				Msgs = Translation.MessagesEN;
-			}   
 		}
 		#region Actions with hooks
 		public static void StartHook()

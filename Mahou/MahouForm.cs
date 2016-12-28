@@ -287,7 +287,7 @@ namespace Mahou
 		void btnHelp_Click(object sender, EventArgs e)
 		{
 			messagebox = true;
-			MessageBox.Show(MMain.Msgs[2], MMain.Msgs[3], MessageBoxButtons.OK, MessageBoxIcon.Information);
+			MessageBox.Show(Strings.CommonToolTop, Strings.Attention, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 		void GitHubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
@@ -304,15 +304,6 @@ namespace Mahou
 		}
 		void btnLangChange_Click(object sender, EventArgs e)
 		{
-			if (MMain.MyConfs.Read("Locales", "LANGUAGE") == "RU") {
-				MMain.MyConfs.Write("Locales", "LANGUAGE", "EN");
-				btnLangChange.Text = "EN";
-			} else if (MMain.MyConfs.Read("Locales", "LANGUAGE") == "EN") {
-				MMain.MyConfs.Write("Locales", "LANGUAGE", "RU");
-				btnLangChange.Text = "RU";
-			}
-			Logging.Log("UI language changed to ["+MMain.MyConfs.Read("Locales", "LANGUAGE")+"].");
-			MMain.InitLanguage();
 			RefreshLanguage();
 		}
 		#endregion
@@ -442,7 +433,7 @@ namespace Mahou
 			IfNotExist();
 			if (tempCLineKey == tempCLKey && tempCLMods == tempCLineMods) {
 				messagebox = true;
-				MessageBox.Show(MMain.Msgs[4], MMain.Msgs[5], MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Strings.YouHaveAssignedSameHotkeys, Strings.Warning, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			} else {			
 				if (!string.IsNullOrEmpty(tempCLMods) && tempCLKey != 0)
 					MMain.MyConfs.Write("Hotkeys", "HKCLMods", tempCLMods);
@@ -452,7 +443,7 @@ namespace Mahou
 					messagebox = false;
 				} else {
 					messagebox = true;
-					MessageBox.Show(MMain.Msgs[6], MMain.Msgs[5], MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(Strings.PressedModifiersForConvertWordHotkey, Strings.Warning, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 
 				if (!string.IsNullOrEmpty(tempCSMods) && tempCSKey != 0)
@@ -463,7 +454,7 @@ namespace Mahou
 					messagebox = false;
 				} else {
 					messagebox = true;
-					MessageBox.Show(MMain.Msgs[7], MMain.Msgs[5], MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(Strings.PressedModifiersForConvertSelectionHotkey, Strings.Warning, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 
 				if (!string.IsNullOrEmpty(tempCLineMods) && tempCLineKey != 0)
@@ -474,11 +465,11 @@ namespace Mahou
 					messagebox = false;
 				} else {
 					messagebox = true;
-					MessageBox.Show(MMain.Msgs[8], MMain.Msgs[5], MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(Strings.YouHavePressedJustModifiersForConvertLineHotkey, Strings.Warning, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 				if ((tempCLKey == 20 || tempCSKey == 20 || tempCLineKey == 20) && cbSwitchLayoutKeys.Text == "CapsLock") {
 					messagebox = true;
-					MessageBox.Show(MMain.Msgs[12], MMain.Msgs[11], MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(Strings.UsingCapsLockProduceIssues, Strings.MahouSnippetsError, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 			}
 			if (cbAutorun.Checked) {
@@ -569,7 +560,6 @@ namespace Mahou
 			cbCLineActive.Checked = MMain.MyConfs.ReadBool("EnabledHotkeys", "HKCLineEnabled");
 			cbCSActive.Checked = MMain.MyConfs.ReadBool("EnabledHotkeys", "HKCSEnabled");
 			cbELSType.SelectedIndex = MMain.MyConfs.ReadInt("Functions", "ELSType");
-			btnLangChange.Text = MMain.MyConfs.Read("Locales", "LANGUAGE");
 			if (!messagebox) {
 				tbCLHK.Text = OemReadable((MMain.MyConfs.Read("Hotkeys", "HKCLMods").Replace(",", " +") +
 				" + " + Remake((Keys)MMain.MyConfs.ReadInt("Hotkeys", "HKCLKey"), true)).Replace("None + ", ""));
@@ -601,7 +591,7 @@ namespace Mahou
 				cbLangOne.SelectedIndex = MMain.lcnmid.IndexOf(MMain.MyConfs.Read("Locales", "locale1Lang") + "(" + MMain.MyConfs.Read("Locales", "locale1uId") + ")");
 				cbLangTwo.SelectedIndex = MMain.lcnmid.IndexOf(MMain.MyConfs.Read("Locales", "locale2Lang") + "(" + MMain.MyConfs.Read("Locales", "locale2uId") + ")");
 			} catch {
-				MessageBox.Show(MMain.Msgs[9], MMain.Msgs[5], MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(Strings.YouHaveRemovedSelectedLocalesReselect, Strings.Warning, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				RefreshLocales();
 				cbLangOne.SelectedIndex = 0;
 				cbLangTwo.SelectedIndex = 1;
@@ -698,83 +688,83 @@ namespace Mahou
 		void cbCycleMode_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbCycleMode.Text;
-			HelpTT.Show(MMain.TTips[0], cbCycleMode);
+			HelpTT.Show(Strings.WhileThisOptionEnabled, cbCycleMode);
 		}
 		void tbCLHK_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = tbCLHK.Text;
-			HelpTT.Show(MMain.TTips[1], tbCLHK);
+			HelpTT.Show(Strings.HotkeyForConvertWordPress, tbCLHK);
 		}
 		void tbCSHK_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = tbCSHK.Text;
-			HelpTT.Show(MMain.TTips[2], tbCSHK);
+			HelpTT.Show(Strings.HotkeyForConvertSelectionPress, tbCSHK);
 		}
 		void tbCLineHK_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = tbCLineHK.Text;
-			HelpTT.Show(MMain.TTips[3], tbCLineHK);
+			HelpTT.Show(Strings.HotkeyForConvertLinePress, tbCLineHK);
 		}
 		void GitHubLink_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = GitHubLink.Text;
-			HelpTT.Show(MMain.TTips[4], GitHubLink);
+			HelpTT.Show(Strings.GoToGitHubRepositoryToViewSourceOrReportIssue, GitHubLink);
 		}
 		void TrayIconCheckBox_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbTrayIcon.Text;
-			HelpTT.Show(MMain.TTips[5], cbTrayIcon);
+			HelpTT.Show(Strings.TogglesVisibilityOfIconInATray, cbTrayIcon);
 		}
 		void btnUpd_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = btnUpd.Text;
-			HelpTT.Show(MMain.TTips[6], btnUpd);
+			HelpTT.Show(Strings.CheckForUpdatesAndUpdateIfNeeded, btnUpd);
 		}
 		void cbBlockAC_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbBlockC.Text;
-			HelpTT.Show(MMain.TTips[7], cbBlockC);
+			HelpTT.Show(Strings.BlocksHotkeysThatUseControl, cbBlockC);
 		}
 		void cbSwitchLayoutKeys_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbSwitchLayoutKeys.Text;
-			HelpTT.Show(MMain.TTips[8], cbSwitchLayoutKeys);
+			HelpTT.Show(Strings.SwitchingLayoutDependsOnCycleModeEmuOptions, cbSwitchLayoutKeys);
 		}
 		void cbUseEmulate_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbUseEmulate.Text;
-			HelpTT.Show(MMain.TTips[9], cbUseEmulate);
+			HelpTT.Show(Strings.CycleModeWillUseEmulationOf, cbUseEmulate);
 		}
 		void cbUseCycleForCS_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbCSSwitch.Text;
-			HelpTT.Show(MMain.TTips[10], cbCSSwitch);
+			HelpTT.Show(Strings.CovertSelectionUseLayoutSwitching, cbCSSwitch);
 		}
 		void gbSBL_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = gbSBL.Text;
-			HelpTT.Show(MMain.TTips[11], gbSBL);
+			HelpTT.Show(Strings.OnlyWorksWhenCycleModeIsOFF, gbSBL);
 		}
 		void cbRePress_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbRePress.Text;
-			HelpTT.Show(MMain.TTips[12], cbRePress);
+			HelpTT.Show(Strings.ModifiersWillBeRepressed, cbRePress);
 		}
 		void cbEatOneSpace_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbEatOneSpace.Text;
-			HelpTT.Show(MMain.TTips[13], cbEatOneSpace);
+			HelpTT.Show(Strings.PressingONESpace, cbEatOneSpace);
 
 		}
 		void cbResel_MouseHover(object sender, EventArgs e)
 		{
 			HelpTT.ToolTipTitle = cbResel.Text;
-			HelpTT.Show(MMain.TTips[14], cbResel);
+			HelpTT.Show(Strings.EnablingThisWillReselectText, cbResel);
 		}
 		void cbELSType_MouseHover(object sender, EventArgs e)
 		{
-			HelpTT.ToolTipTitle = MMain.TTips[19];
-			HelpTT.Show(MMain.TTips[15], cbELSType);
+			HelpTT.ToolTipTitle = Strings.EmuType;
+			HelpTT.Show(Strings.SelectTypeForEmulateChangeLayout, cbELSType);
 		}
 		#endregion
 	}

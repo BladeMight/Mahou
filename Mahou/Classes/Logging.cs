@@ -2,6 +2,7 @@
 using System;
 using System.Windows.Forms;
 using System.IO;
+using Mahou.Resources.Strings;
 
 namespace Mahou
 {
@@ -37,7 +38,7 @@ namespace Mahou
 					if (errcount > 10 && !messagebox)
 					{
 						messagebox = true;
-						MessageBox.Show(MMain.Msgs[14]+"\r\n\r\n"+e.Message+"\r\n\r\n"+e.StackTrace,MMain.Msgs[5]);
+						MessageBox.Show(Strings.LoggingDisabled+"\r\n\r\n"+e.Message+"\r\n\r\n"+e.StackTrace,Strings.Warning);
 						MMain.MyConfs.Write("Functions","Logging","False");
 						errcount=0;
 						messagebox = false;
